@@ -1,0 +1,87 @@
+.black-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.page-title {
+  font-size: 6vw;
+}
+
+@media (max-width: 800px) {
+  .page-title {
+    font-size: 40pt;
+    /* Smaller screens */
+  }
+}
+
+.page-text {
+  font-size: 2.5vw;
+}
+
+@media (max-width: 800px) {
+  .page-text {
+    font-size: 25pt;
+  }
+}
+
+.small-page-text {
+  font-size: 1.5vw;
+  font-family: 'Consolas', sans-serif;
+}
+
+@media (max-width: 800px) {
+  .small-page-text {
+    font-size: 25pt;
+  }
+}
+
+.btn-large {
+  font-size: 3vw !important;
+}
+
+@media (max-width: 800px) {
+  .btn-large {
+    font-size: 25pt !important;
+  }
+}
+
+.btn-small {
+  font-size: 2vw !important;
+}
+
+@media (max-width: 800px) {
+  .btn-small {
+    font-size: 20pt !important;
+  }
+}
+
+.bottom {
+  margin-top: 2vw !important;
+}
+
+.btn {
+  margin: 0.5vw;
+}
+
+.margined {
+  margin: 2vw;
+}
+
+.scrollable {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.carousel-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.carousel-row {
+  flex-wrap: nowrap !important;
+}
+
+.carousel-col {
+  display: inline-block;
+}

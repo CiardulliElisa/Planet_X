@@ -1,0 +1,19 @@
+{
+    "name": "Node.js",
+    "dockerFile": "Dockerfile",
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "PulkitGangwar.nextjs-snippets",
+                "dsznajder.es7-react-js-snippets",
+                "xabikos.JavaScriptSnippets",
+                "dbaeumer.vscode-eslint",
+                "eamodio.gitlens",
+                "ecmel.vscode-html-css",
+                "formulahendry.auto-rename-tag",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}

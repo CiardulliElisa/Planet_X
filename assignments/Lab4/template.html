@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>WIE 2023 - Lab 4</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5 mb-3">Voting</h1>
+      <div id="voting"></div>
+    </div>
+
+    <script>
+      function increment(i) {
+        // TODO increment counter for option i by 1
+        var span = document.getElementById(i.title);
+        var currentValue = parseInt(span.textContent);
+        span.textContent = currentValue + 1;
+      }
+
+      var options = [
+        { title: "Option 1", description: "This is Option 1" },
+        { title: "Option 2", description: "This is Option 2" },
+        { title: "Option 3", description: "This is Option 3" },
+      ];
+
+      // TODO
+      // - create a list group as a child of div#voting
+      //   with an li-element for each option in the array options
+      //   as in https://getbootstrap.com/docs/5.0/components/list-group/#numbered
+      // - add an onClick event to each li-element that triggers the function increment
+
+      //Get div#voting
+      var div = document.getElementById("voting");
+      //Create an oredered list
+      var list = document.createElement("ol");
+      //Add Bootstrap class to list
+      list.className = "list-group list-group-numbered";
+      //Append list as child to div#voting
+      div.appendChild(list);
+      //Create options in list
+
+      options.forEach((o) => {
+        //Create option
+        var option = document.createElement("li");
+        //Add Bootstrap class to list option
+        option.className =
+          "list-group-item d-flex justify-content-between align-items-start";
+
+        option.innerHTML =
+          '<div class="ms-2 me-auto"><div class="fw-bold">' +
+          o.title +
+          "</div>" +
+          o.description +
+          '</div><span id="' +
+          o.title +
+          '" class="badge bg-primary rounded-pill">0</span>';
+        option.onclick = () => {
+          increment(o);
+        };
+        list.appendChild(option);
+      });
+    </script>
+  </body>
+</html>
